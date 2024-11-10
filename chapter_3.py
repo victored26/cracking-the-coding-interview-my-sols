@@ -2,7 +2,16 @@
 
 # <!-- Problem 1 --!>
 
-"""One way we can use a single list to implement three stacks is by
+"""One way we can use a single list to implement three stacks is allocate
+the list indices by their remainder mod 3:
+
+                    stack 1 indices: 0, 3, 6, ...
+                    stack 2 indices: 1, 4, 7, ...
+                    stack 3 indices: 2, 5, 8, ...
+
+This way we make full use of the list."""
+
+"""Another way we can use a single list to implement three stacks is by
 using primes indices. The first three prime numbers are 2, 3, and 5. 
 
 For stack number one, we can stores its values at locations list[2^n] for n
@@ -13,7 +22,12 @@ primes.
 
 To see this let p and p' be distinct primes. Then the equation p = n * p' has 
 no solutions for n a natural number. This is because if such a solution 
-existed, then p' would divide p which would mean that p is not a prime."""
+existed, then p' would divide p which would mean that p is not a prime.
+
+This way leads to more unused space, but if we ever wanted to 
+implement additional stacks, we would not need to alter anything. All we 
+need to do is assign new primes to the stacks. For example, for four stacks
+we include the prime 7."""
 
 # <!-- Problem 2 --!>
 
