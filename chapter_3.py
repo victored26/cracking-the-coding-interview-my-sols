@@ -2,6 +2,19 @@
 
 # <!-- Problem 1 --!>
 
+"""One way we can use a single list to implement three stacks is by
+using primes indices. The first three prime numbers are 2, 3, and 5. 
+
+For stack number one, we can stores its values at locations list[2^n] for n
+a natural number. Similarly, we can store the values of stack number two
+at locations list[3^n], and the values of stack number three at listp[5^p].
+The reason why we will not run into any problems is because 2, 3, and 5 are
+primes. 
+
+To see this let p and p' be distinct primes. Then the equation p = n * p' has 
+no solutions for n a natural number. This is because if such a solution 
+existed, then p' would divide p which would mean that p is not a prime."""
+
 # <!-- Problem 2 --!>
 
 """We can construct stacks in the same way we constructed Linked Lists; 
